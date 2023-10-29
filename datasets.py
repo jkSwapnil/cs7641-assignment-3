@@ -1,6 +1,6 @@
 # This module defines interfaces and classes implementing the datasets
-
-# TODO: Give credits to myself
+# - - - -
+# Note: The code here can have a lot of similarity with my previous assignments' dataset code
 
 import numpy as np
 import pandas as pd
