@@ -9,14 +9,7 @@ from sklearn.mixture import GaussianMixture
 from config import RANDOM_STATE
 from datasets import RiceData
 
-
-
 from nn_util import nn_trainer
-from pca_rice import execute_pca
-from ica_rice import execute_ica
-from rp_rice import execute_rp
-from isomap_rice import execute_isomap
-
 
 # Load the Rice dataset
 # Perform both the clustering and create dataset with these features
@@ -36,7 +29,7 @@ print("- Rice dataset with KMeans labels is loaded")
 # Perform EM clustering as features | Using 2 clusters
 em = GaussianMixture(n_components=2, random_state=RANDOM_STATE)
 em.fit(X)
-em_labels = kmeans.predict(X).reshape((-1,1))
+em_labels = em.predict(X).reshape((-1,1))
 EM_X = np.concatenate([X, em_labels], axis=1)
 em_x_train, em_x_test, y_train, y_test = train_test_split(EM_X, y, test_size=0.2, random_state=RANDOM_STATE)
 print("- Rice dataset with EM labels is loaded")
