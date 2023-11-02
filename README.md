@@ -1,2 +1,3 @@
-# cs7641-assignment-3
-Assignment 3 of CS 7641
+# CS7641 Assignment 3: Unsupervised Learning and Dimensionality Reduction
+
+This project implements the code needed for Assignment 3 of CS7641
